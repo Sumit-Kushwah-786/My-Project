@@ -1,0 +1,901 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border;
+}
+
+body{
+    background: #efefef;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px ;
+
+}
+
+.nav-left .logo{
+    width: 40px;
+    margin: 5px 8px;
+    cursor: pointer;
+}
+
+.nav-left .logo img{
+    width: 100%;
+    border: 50%;
+
+}
+
+
+.nav-left .search-box{
+    width: 230px;
+    height: 40px;
+    background: #efefef;
+    border-radius: 20px;
+    margin-left: 4px;
+    align-items: center;
+    padding: 0px 8px;
+    position: relative;
+    
+}
+
+.nav-left .search-box i{
+    color: #919191;
+    margin-left: 5px;
+    line-height: 40px;
+    
+}
+
+.nav-left .search-box input{
+    background: transparent;
+    outline: none;
+    border: 0;
+    margin-left: 4px;
+    width: 150px;
+    font-size: 14px;
+    font-style: sans;
+}
+
+
+.nav-center{
+    margin-right: 30px;
+}
+
+.nav-center i{
+    width: 50px;
+    background: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: 22px;
+    padding: 13px 40px;
+    color: #646262;
+}
+
+.nav-center .fa-house{
+    color: #1814f1;
+    position: relative;
+}
+
+.nav-center .fa-house::after{
+    content: '';
+    background: #3636f8;
+    width: 90%;
+    height: 2px;
+    bottom: -6px;
+    left: 7px;
+    position: absolute;
+}
+
+.nav-center a i:hover{
+    background: #efefef;
+    color: #252525;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-right img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    line-height: 45px;
+    margin-right: 16px;
+    margin-left: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-right i{
+    
+    background: #efefef;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 22px;
+    padding: 10px;
+    
+}
+
+.nav-right i:hover{
+    background: #b9b7b7;
+}
+
+
+/* .........menu of acount....... */
+
+.card-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.open-menu{
+    max-height: 600px;
+}
+
+.card-menu{
+    width: 330px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 14px;
+}
+
+.card-menu-items{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 8px;
+    padding: 5px 0;
+    color: black;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.profile-menu{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 2px 0 5px  rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 12px 0;
+    margin-bottom: 15px;
+}
+
+.profile-menu p{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 550;
+}
+
+.card-menu-items:hover{
+    background: #efefef;
+}
+
+.card-menu-items p{
+    width: 100%;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.card-menu-items span{
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-menu-items img{
+    width: 40px;
+    background: #e5e5e5;
+    padding: 8px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+/* .....3 portion of Facebook..... */
+
+.main{
+    display: flex;
+    margin-top: 60px;
+}
+
+/* .....1 left portion of Facebook..... */
+
+.main-left{
+    width: 24%;
+    height: 92vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: fixed;
+}
+
+.main-left::-webkit-scrollbar{
+    width: 7px;
+} 
+
+.main-left::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: #f2f2f2;
+
+} 
+
+.main-left:hover::-webkit-scrollbar-thumb{
+    background: #bcbbbb;
+} 
+
+.img{
+    display: flex;
+    height: 40px;
+    margin: 5px 10px ;
+    cursor: pointer;
+
+}
+
+.img:hover{
+    background: floralwhite;
+    border-radius: 7px;
+}
+
+.img p{
+    padding: 14px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #252525;
+    margin-left: 10px;
+
+}
+
+.img img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px 12px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main-left hr{
+    border: 0;
+    background: #ccc;
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+}
+
+.shortcuts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4px 12px;
+
+}
+
+.shortcuts a{
+    text-decoration: none;
+
+}
+
+.shortcuts p{
+    font-size: 18px;
+}
+
+
+/* .....2 Center portion of Facebook...... */
+
+.main-center{
+    width: 38%;
+    margin-left: 29%;
+    height: auto;
+    background: #f2f2f2;
+    border-radius: 10px;
+    padding: 0px 20px 0 20px;
+}
+
+.top-box{
+    width: 100%;
+    height: 280px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background: #fff;
+    padding: 20px 10px 0px ;
+    border-radius: 10px;
+}
+
+.my-story{
+    width: 135px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 5px;
+    box-shadow: 0 1px 9px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.my-story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.upload{
+    width: 100%;
+    height: 60p;
+    position: relative;
+    bottom: 50px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.upload img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    bottom: 15px;
+}
+
+.upload p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.friends-story{
+    width: 135px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 5px;
+    box-shadow: 0 1px 9px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.friends-story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.friend-profile{
+    position: relative;
+    bottom: 240px;
+    margin-left: 12px;
+}
+
+.friend-profile .circle{
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #41db41;
+    border: 1px solid #fff;
+    bottom: 6px;
+    left: 25px;
+}
+
+.friend-profile img{
+    width: 30px;
+    height: 30p;
+    border-radius: 50%;
+    border: 2px solid  #45abff;
+}
+
+.friend-name{
+    position: relative;
+    bottom: 80px;
+    padding: 0 9px;
+
+}
+
+.friend-name p{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ..2.1 create-post.. */
+
+.create-post{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 7px;
+    box-shadow: 0 1p 8px rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+
+}
+
+.create-post .ptop{
+    display: flex;
+    align-items: center;
+}
+.create-post .ptop img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ptop input{
+    width: 90%;
+    padding: 10px;
+    margin-left: 20px;
+    border: 0;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 30px;
+    font-size: 17px;
+}
+
+.ptop input:hover{
+    background: #e3e3e3;
+    cursor: pointer;
+}
+
+.pbottom{
+    width: 100%;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 5px auto;
+}
+
+.pbottom .post-icon{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 7px 25px;
+    cursor: pointer;
+}
+
+.pbottom .post-icon:hover{
+    
+    background: #efefef;
+    border-radius: 8px;
+}
+
+.pbottom .post-icon i.red{
+    font-size: 20px;
+    color: red;
+    margin-right: 8px;
+}
+.pbottom .post-icon i.green{
+    font-size: 20px;
+    color: green;
+    margin-right: 8px;
+}
+.pbottom .post-icon i.yellow{
+    font-size: 20px;
+    color: yellow;
+    margin-right: 8px;
+}
+
+/* ...2.2 creat Friend post... */
+
+.friends-post{
+    margin: 10px 0;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.friends-ptop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.friends-ptop .img-name{
+    display: flex;
+    align-items: center;
+}
+
+.friends-ptop .img-name img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.friends-name{
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.friends-name:hover{
+    text-decoration: underline;
+
+}
+
+.friends-name .time{
+    font-size: 13px;
+    color: #919191;
+    margin: 3px 0;
+}
+
+.friends-name .time i{
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+
+.friends-ptop .menu{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.friends-ptop .menu:hover{
+    background: #efefef;
+    cursor: pointer;
+}
+
+.friends-post img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.friends-post .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.friends-post .post-icons{
+    display: flex;
+}
+
+.friends-post .post-icons img{
+    width: 20px;
+    height: 20px;
+
+}
+
+.info .comment{
+    display: flex;
+    align-items: center;
+}
+
+.info .comment p{
+    padding: 0 12px;
+    font-size: 15px;
+    color: #919191;
+}
+
+hr{
+    height: 1px;
+}
+
+.friends-post .like{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.friend-post .like .like-icon{
+    display: flex;
+    align-items: center;
+
+
+}
+
+.friends-post .like-icon i{
+    font-size: 20px;
+    margin-right: 8px;
+    color: #919191;
+}
+
+.comment-wrapper{
+    display: flex;
+    align-items: center;
+
+}
+
+.comment-wrapper img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 15px;
+}
+
+.comment-wrapper .circle{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #27cc37;
+    border: 1px solid #fff;
+    position: relative;
+    top: 15px;
+    right: 25px;
+
+}
+
+.comment-wrapper .comment-search{
+    width: 90%;
+    padding: 5px 15px;
+    background: #efefef;
+    border-radius: 30px;
+
+}
+
+.comment-search input{
+    width: 80%;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    margin-top: 3px;
+}
+
+.comment-search i{
+    padding: 0 5px;
+    color: #919191;
+}
+
+/* ....video.... */
+
+.friends-post video{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+
+
+
+/* .....3 Right portion of Facebook..... */
+
+.main-right{
+    width: 23%;
+    height: 92vh;
+    
+    margin-right: 10px;
+    margin-left: 76%;
+    padding: 12px 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: fixed;
+
+}
+
+.main-right::-webkit-scrollbar{
+    width: 7px;
+} 
+
+.main-right::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: #f2f2f2;
+
+} 
+
+.main-right:hover::-webkit-scrollbar-thumb{
+    background: #bcbbbb;
+}
+
+h4{
+    color: #656565;
+    font-size: 16px;
+}
+
+.sponsored-link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 7px;
+    padding: 5px 0;
+}
+.sponsored-link:hover{
+    background: #e8e7e7;
+    border-radius: 7px;
+}
+
+.sponsored-link img{
+    width: 90px;
+    height: 80px;
+    border-radius: 8px;
+    margin: 6px 3px;
+}
+
+.sponsored-link p{
+    padding: 14px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #252525;
+    margin-left: 10px;
+}
+
+.sponsored-link p a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #646262;
+}
+
+
+hr{
+    width: 100%;
+    height: 1px;
+    background: none;
+    margin: 16px 0;
+    color: #818181;
+}
+
+.page-link{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.page-link:hover{
+    background: #e8e7e7;
+    border-radius: 7px;
+}
+
+.page-link p{
+    padding: 40px 0;
+    font-size: 15px;
+    font-weight: 550;
+    color: #252525;
+    margin-left: 15px;
+}
+
+.page-link img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.page-link-items{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.page-link-items:hover{
+    background: #e8e7e7;
+    border-radius: 7px;
+}
+
+.page-link-items img{
+    width: 30px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 11%;
+}
+
+.page-link-items p{
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.buttons{
+    margin-left: 20%;
+}
+
+.buttons .confirm{
+    padding: 7px 18px;
+    border-radius: 8px;
+    background: #468ff6;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.buttons .delete{
+    padding: 7px 18px;
+    border-radius: 8px;
+    background: rgb(150, 150, 150);
+    color: #3a3939;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.online{
+    position: relative;
+    
+}
+.online::after{
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #41db41;
+    bottom: 0;
+    right: 0;
+
+}
+
+.contact-section .search{
+    display: flex;
+    align-items: center;
+
+}
+
+.contact-section .search img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #919191;
+    border: none;
+    color: #252525;
+    cursor: pointer;
+}
+
+.contact-section .search img:hover{
+    background: #767676;
+}
+
+
+.contact-section .search h4{
+    flex-grow: 1;
+    font-size: 16px;
+
+}
